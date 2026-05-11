@@ -43,7 +43,7 @@ def test_button_text():
 
     button = driver.find_element(By.ID, "submitBtn")
 
-    assert button.text == "Отправить"
+    assert button.text == "Отправить форму"
 
     driver.quit()
 
