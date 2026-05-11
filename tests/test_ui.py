@@ -17,8 +17,9 @@ def get_driver():
         service=Service(ChromeDriverManager().install()),
         options=options
     )
-
-    file_path = os.path.abspath("index.html")
+    
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "..", "index.html")
 
     driver.get(f"file:///{file_path}")
 
